@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles/normalizer.css" />
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/cntrl.js"></script>
+	<title>Portfolio Rafael Carmona Arrabal.</title>
+</head>
+<body>
+	<header>
+		<h1 id="inicioButton">ronserot.com</h1>
+		<button id="abrirMovil"><i class="fa fa-bars"></i></button>
+		<nav>
+			<ul id="menu">
+				<li id="whoiamButton">Quién soy</li>
+				<li id="jobsButton">Trabajos</li>
+				<li id="skillsButton">Conocimientos</li>
+				<li id="contactButton">Contacto</li>
+			</ul>
+		</nav>
+	</header>	
+	<main>
+		<section id='home'>
+			<div id="titulo"><div>Rafa 'Ronserot' Carmona Arrabal</div><img src="imgs/arrow.gif" alt="img_arrow" id="botonBajar"></div>
+		</section>
+		<section id='whoiam'>
+			<article id="whoiamDesc">
+				<h2>¿Quién soy?</h2>
+				<img class="imgPerfil" src="imgs/mifoto.jpg" alt="">
+				<div class="text">Me llamo Rafa Carmona Arrabal y suelo identificarme como <i>Ronserot</i> por el mundo de internet. Mi hobby y trabajo es la <b>programación</b>, no teniendo preferencia en ningún campo, ya que me gusta programar tanto en frontend como backend. Mi otra pasión son los videojuegos, dedicando algún tiempo de mi vida a comprender el arte que los envuelve. Aunque éstos sean mis principales hobbies, también tengo más, como por ejemplo la música. Aunque abandoné (por falta de tiempo) mi guitarra hace ya 2 años, a veces la vuelvo a enchufar. También me gusta leer, siendo <b>Sir Arthur Conan Doyle</b> mi escritor favorito, y cómo no, <b>Sherlock Holmes</b> mi saga de libros favorita.</div>
+				<div id="followMe">
+					<h3>!Me puedes encontrar aquí!</h3>
+					<a href="https://twitter.com/Carmona997"><img src="./imgs/twitter.svg" alt="twitter"></a>
+					<a href="https://github.com/rafacarmona"><img src="./imgs/github.svg" alt="github"></a>
+					<a href="http://steamcommunity.com/id/Ronserot/"><img src="./imgs/steam.svg" alt="steam"></a>
+				</div>
+			</article>
+		</section>
+		<section id="jobs">
+			<article id="jobsDesc">
+				<h2>Trabajos</h2>
+				<div id="imagenes">
+					<div><a href="https://github.com/rafacarmona/cuatroEnRaya">Conecta 4<img src="./imgs/conecta4.jpg" alt=""></a></div>
+					<div><a href="https://github.com/rafacarmona/ajaxjquery">Ajax en Jquery<img src="./imgs/ajaxjquery.jpg" alt=""></a></div>
+					<div><a href="https://github.com/rafacarmona/masterMind">Master Mind<img src="./imgs/MasterMind.jpg" alt="./imgs/MasterMind.jpg"></a></div>
+					<div><a href="https://github.com/rafacarmona/jsonAjax">Json y Ajax<img src="./imgs/ajaxJson.jpg" alt=""></a></div>
+					<div><a href="https://github.com/rafacarmona/proyectoContadorBaloncesto">Marcador de baloncesto<img src="./imgs/marcador.jpg" alt=""></a></div>
+					<div><a href="https://github.com/rafacarmona/proyectoCalculadora">Calculadora<img src="./imgs/calculadora.jpg" alt=""></a></div>
+				</div>
+			</article>
+		</section>
+		<section id='skills'>
+			<article id="skillsDesc">
+				<h2>Habilidades</h2>
+				<article id="barras">
+					<div class="contenedorBarras"><img src="./imgs/jsIcon.png" alt="logoJavascript">
+						<div id="js"><div id="barraLlenaJS">80%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/htmlIcon.png" alt="logoHtml">
+						<div id="html"><div id="barraLlenaHTML">70%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/cssIcon.svg" alt="logoCss">
+						<div id="css"><div id="barraLlenaCSS">75%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/phpIcon.png" alt="logoPhp">
+						<div id="php"><div id="barraLlenaPHP">65%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/javaIcon.png" alt="logoJava">
+						<div id="java"><div id="barraLlenaJava">55%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/csharpIcon.png" alt="logoCsharp">
+						<div id="csharp"><div id="barraLlenaCsharp">35%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/androidIcon.png" alt="logoAndroid">
+						<div id="android"><div id="barraLlenaAndroid">40%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/ionicIcon.png" alt="logoIonic">
+						<div id="ionic"><div id="barraLlenaIonic">20%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/jqIcon.png" alt="logoJq">
+						<div id="jquery"><div id="barraLlenaJq">37%</div></div>
+					</div>
+					<div class="contenedorBarras"><img src="./imgs/sqlIcon.png" alt="logoMysql">
+						<div id="mysql"><div id="barraLlenaMysql">63%</div></div>
+					</div>
+				</article>
+			</article>
+		</section>
+		<section id="contact">
+			<article id="contactDesc">
+				<h2>Contacto</h2>
+				<div id="formulario">
+					<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+						<div>
+							<label for="name">Nombre:</label>
+							<input id="name" name="name" type="text" autocomplete="name" placeholder="Red Blue Gold" required="true" />
+						</div>
+						<div>
+							<label for="email">Email:</label>
+							<input id="email" name="email" type="text" autocomplete="email" placeholder="red@gold.com" required="true"/>
+						</div>
+						<div>
+							<label for="message">Escribeme tu mensaje:</label>
+							<textarea id="message" name="message" rows="7" cols="30" required></textarea>
+						</div>
+						<button id="submit_button" type="submit" >Enviar</button>
+					</form>
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>

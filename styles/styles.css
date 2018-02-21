@@ -1,0 +1,305 @@
+@font-face {
+  font-family: roboto;
+  src: local("../fonts/karma_suture"), url("../fonts/karma_suture.ttf") format("truetype"); }
+@font-face {
+  font-family: karma;
+  src: local("../fonts/karma_future"), url("../fonts/karma_future.ttf") format("truetype"); }
+@font-face {
+  font-family: "PokemonGB";
+  src: local("../fonts/PokemonGB"), url("../fonts/PokemonGB.ttf") format("truetype"); }
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: roboto;
+  color: #DFDFDF; }
+  html ul, html li, body ul, body li {
+    margin: 0;
+    padding: 0; }
+  html a, body a {
+    text-decoration: none;
+    color: black;
+    transition: color ease-in 0.3s; }
+    html a:hover, body a:hover {
+      color: #e3e3e3; }
+  html h1, body h1 {
+    margin: 0; }
+
+header {
+  z-index: 1000;
+  position: fixed;
+  min-width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)); }
+  header h1 {
+    color: #b1b1b1;
+    font-family: karma;
+    margin: 1rem 0.7rem;
+    min-width: 80%;
+    min-height: 0;
+    display: inline-block;
+    text-align: left;
+    vertical-align: sub;
+    cursor: pointer; }
+    @media screen and (min-width: 1000px) {
+      header h1 {
+        margin: 0 0 0 0.7rem;
+        min-width: 22%; } }
+  header .fa {
+    font-size: 1.7rem; }
+  header #abrirMovil {
+    display: inline-block;
+    outline: none;
+    vertical-align: middle;
+    background: none;
+    border: 0px;
+    color: white; }
+    @media screen and (min-width: 1000px) {
+      header #abrirMovil {
+        display: none; } }
+  header nav {
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    min-width: 100%; }
+    @media screen and (min-width: 1000px) {
+      header nav {
+        min-width: 76%;
+        text-align: right; } }
+    header nav ul {
+      display: none; }
+      @media screen and (min-width: 1000px) {
+        header nav ul {
+          text-align: right;
+          display: block; } }
+      header nav ul li {
+        margin: 1.3rem 0.7rem;
+        display: block;
+        list-style: none;
+        cursor: pointer;
+        transition: color ease-in 0.2s;
+        text-shadow: 3px 3px 2px #0f0f0f;
+        font-weight: bold; }
+        @media screen and (min-width: 1000px) {
+          header nav ul li {
+            display: inline-block; } }
+        header nav ul li:hover {
+          color: #ccc; }
+
+main section {
+  min-height: 90vh;
+  padding-top: 10vh;
+  text-align: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; }
+  main section article {
+    padding: 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5));
+    min-width: 80%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px 0 #000; }
+    main section article * {
+      margin: 0.5rem; }
+    main section article .text {
+      text-align: justify;
+      text-shadow: 1px 1px 2px #000; }
+main h2 {
+  font-family: karma;
+  color: #ccc;
+  padding: 1rem 0;
+  margin: 0;
+  text-shadow: 1px 1px 2px #000; }
+main #home {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background1.gif"); }
+  main #home #titulo {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    right: 0;
+    font-family: karma;
+    font-weight: 700;
+    color: #ccc;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 1000px) {
+      main #home #titulo {
+        font-size: 2.6rem; } }
+    main #home #titulo img {
+      cursor: pointer;
+      width: 2rem;
+      margin-top: 3%; }
+main #whoiam {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background2.png"); }
+  main #whoiam article .imgPerfil {
+    width: 8rem;
+    border-radius: 50%;
+    border: thick double white; }
+  main #whoiam article #followMe img {
+    width: 2rem;
+    color: white; }
+main #jobs {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background3.png"); }
+main #skills {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background3.jpg"); }
+  main #skills #skillsDesc {
+    background: linear-gradient(rgba(200, 200, 200, 0.5), rgba(150, 150, 150, 0.5)) !important; }
+  main #skills #barras {
+    display: flex;
+    flex-flow: wrap; }
+    main #skills #barras .contenedorBarras {
+      min-width: 100%; }
+      @media screen and (min-width: 1000px) {
+        main #skills #barras .contenedorBarras {
+          min-width: 45%; } }
+      main #skills #barras .contenedorBarras img {
+        width: 2rem;
+        vertical-align: middle; }
+      main #skills #barras .contenedorBarras > div {
+        display: inline-block;
+        padding: 0;
+        width: 70%;
+        height: 20px;
+        border: 10px solid transparent;
+        -webkit-border-image: url("../imgs/barravacia.png") 1;
+        -o-border-image: url("../imgs/barravacia.png") 1;
+        border-image: url("../imgs/barravacia.png") 1; }
+        main #skills #barras .contenedorBarras > div > div {
+          margin: 0;
+          min-height: 100%;
+          text-shadow: 2px 2px 5px #000; }
+        main #skills #barras .contenedorBarras > div #barraLlenaJS {
+          width: 80%;
+          background: #a58f27;
+          background: -moz-linear-gradient(-45deg, #a58f27 50%, #FFD93D 100%);
+          background: -webkit-linear-gradient(-45deg, #a58f27 50%, #FFD93D 100%);
+          background: linear-gradient(135deg, #a58f27 50%, #FFD93D 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaHTML {
+          width: 70%;
+          background: #aa3616;
+          background: -moz-linear-gradient(-45deg, #aa3616 50%, #F16524 100%);
+          background: -webkit-linear-gradient(-45deg, #aa3616 50%, #F16524 100%);
+          background: linear-gradient(135deg, #aa3616 50%, #F16524 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaCSS {
+          width: 75%;
+          background: #0070BB;
+          background: -moz-linear-gradient(-45deg, #0070BB 50%, #28AAE1 100%);
+          background: -webkit-linear-gradient(-45deg, #0070BB 50%, #28AAE1 100%);
+          background: linear-gradient(135deg, #0070BB 50%, #28AAE1 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaPHP {
+          width: 65%;
+          background: #4F5B93;
+          background: -moz-linear-gradient(-45deg, #4F5B93 50%, #6181B6 100%);
+          background: -webkit-linear-gradient(-45deg, #4F5B93 50%, #6181B6 100%);
+          background: linear-gradient(135deg, #4F5B93 50%, #6181B6 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaJava {
+          width: 55%;
+          background: #b83d3d;
+          background: -moz-linear-gradient(-45deg, #b83d3d 50%, #F80103 100%);
+          background: -webkit-linear-gradient(-45deg, #b83d3d 50%, #F80103 100%);
+          background: linear-gradient(135deg, #b83d3d 50%, #F80103 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaCsharp {
+          width: 35%;
+          background: #68217A;
+          background: -moz-linear-gradient(-45deg, #68217A 50%, #953DAC 100%);
+          background: -webkit-linear-gradient(-45deg, #68217A 50%, #953DAC 100%);
+          background: linear-gradient(135deg, #68217A 50%, #953DAC 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaAndroid {
+          width: 40%;
+          background: #77C159;
+          background: -moz-linear-gradient(-45deg, #77C159 50%, #A4CA39 100%);
+          background: -webkit-linear-gradient(-45deg, #77C159 50%, #A4CA39 100%);
+          background: linear-gradient(135deg, #77C159 50%, #A4CA39 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaIonic {
+          width: 20%;
+          background: #3581FF;
+          background: -moz-linear-gradient(-45deg, #3581FF 50%, #5394FF 100%);
+          background: -webkit-linear-gradient(-45deg, #3581FF 50%, #5394FF 100%);
+          background: linear-gradient(135deg, #3581FF 50%, #5394FF 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaJq {
+          width: 37%;
+          background: #3558A9;
+          background: -moz-linear-gradient(-45deg, #3558A9 50%, #5394FF 100%);
+          background: -webkit-linear-gradient(-45deg, #3558A9 50%, #5394FF 100%);
+          background: linear-gradient(135deg, #3558A9 50%, #5394FF 100%); }
+        main #skills #barras .contenedorBarras > div #barraLlenaMysql {
+          width: 63%;
+          background: #00618A;
+          background: -moz-linear-gradient(-45deg, #00618A 50%, #3983A3 100%);
+          background: -webkit-linear-gradient(-45deg, #00618A 50%, #3983A3 100%);
+          background: linear-gradient(135deg, #00618A 50%, #3983A3 100%); }
+main #contact {
+  background-image: linear-gradient(rgba(200, 200, 200, 0.5), rgba(150, 150, 150, 0.5)), url("../imgs/background4.jpg"); }
+
+textarea, input {
+  display: inline-block;
+  padding: 0;
+  border: 10px solid transparent;
+  -webkit-border-image: url("../imgs/barravacia.png") 1;
+  -o-border-image: url("../imgs/barravacia.png") 1;
+  border-image: url("../imgs/barravacia.png") 1; }
+
+#formulario {
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(100, 100, 100, 0.5)) !important;
+  padding-top: 1rem; }
+  #formulario label {
+    display: block; }
+  #formulario button {
+    font-family: "PokemonGB", Arial, sans-serif;
+    border-radius: 2px;
+    padding: 0.7rem;
+    line-height: 16px;
+    margin: auto;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black, inset 0 1px 0 1px black, 0 0 0 1px black, inset 0 0 0 1px black;
+    transition: background ease-in 0.3s; }
+    #formulario button:hover {
+      background: #e3e3e3; }
+  #formulario input:required, #formulario textarea {
+    resize: none;
+    min-width: 90%;
+    font-size: 0.5rem;
+    font-family: "PokemonGB", Arial, sans-serif;
+    border-radius: 2px;
+    padding: 0.7rem;
+    line-height: 16px;
+    margin: auto;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black, inset 0 1px 0 1px black, 0 0 0 1px black, inset 0 0 0 1px black; }
+    @media screen and (min-width: 1000px) {
+      #formulario input:required, #formulario textarea {
+        min-width: 30%; } }
+  #formulario input:invalid {
+    background: #de8484; }
+  #formulario input:valid {
+    background: #c3c3c3; }
+
+#jobsDesc #imagenes {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0 auto;
+  justify-content: center; }
+  #jobsDesc #imagenes div {
+    transition: all ease-in 0.3s; }
+    #jobsDesc #imagenes div:hover {
+      transform: translate(0, 0.3rem); }
+    #jobsDesc #imagenes div a {
+      color: #e3e3e3;
+      display: block;
+      transition: all ease-in-out 0.3s; }
+      #jobsDesc #imagenes div a:hover {
+        color: #00fff0;
+        font-size: 1.1rem; }
+      #jobsDesc #imagenes div a img {
+        border: 10px solid transparent;
+        -webkit-border-image: url("../imgs/barravacia.png") 1;
+        -o-border-image: url("../imgs/barravacia.png") 1;
+        border-image: url("../imgs/barravacia.png") 1;
+        width: 15rem;
+        height: 7.5rem;
+        display: block; }
+
+/*# sourceMappingURL=styles.css.map */

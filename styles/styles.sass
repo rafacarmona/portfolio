@@ -1,0 +1,299 @@
+$primaryFont: '../fonts/karma_suture'
+$primaryFontName: roboto
+$titleFont: '../fonts/karma_future'
+$titleFontName: karma
+$primaryColor: #DFDFDF
+$botonColor: #b1b1b1
+$titleColor: #ccc
+//colores de las barras.
+$jsColor1: #a58f27
+$jsColor2: #FFD93D
+$htmlColor1: #aa3616
+$htmlColor2: #F16524
+$cssColor1: #0070BB
+$cssColor2: #28AAE1
+$phpColor1: #4F5B93
+$phpColor2: #6181B6
+$javaColor1: #F80103
+$javaColor2: #b83d3d
+$csharpColor1: #68217A
+$csharpColor2: #953DAC
+$androidColor1: #77C159
+$androidColor2: #A4CA39
+$ionicColor1: #3581FF
+$ionicColor2: #5394FF
+$jqueryColor1: #5394FF
+$jqueryColor2: #3558A9
+$mysqlColor1: #00618A
+$mysqlColor2: #3983A3
+$mediaPC: 1000px
+=font-face ($font, $name)
+	font-family: $name
+	src: local($font), url($font+'.ttf') format('truetype')
+
+=elementSize($width, $height)
+	@if $width
+		min-width: $width
+	@else 
+		//no hacemos nada
+	@if $height
+		min-height: $height
+	@else
+		//no hacemos nada
+=barraInterior($color1, $color2, $width)
+	width: $width
+	background: $color1 /* Old browsers */
+	background: -moz-linear-gradient(-45deg, $color1 50%, $color2 100%)
+	background: -webkit-linear-gradient(-45deg, $color1 50%,$color2 100%)
+	background: linear-gradient(135deg, $color1 50%,$color2 100%)
+//Parámetros por defecto.
+@font-face
+	+font-face($primaryFont, $primaryFontName)
+@font-face
+	+font-face($titleFont, $titleFontName)
+@font-face
+	+font-face("../fonts/PokemonGB","PokemonGB")
+html,body
+	+elementSize(100%, 100%)
+	font-family: $primaryFontName
+	color: $primaryColor
+	ul,li
+		margin: 0
+		padding: 0
+	a
+		text-decoration: none
+		color: black
+		transition: color ease-in 0.3s
+		&:hover
+			color: #e3e3e3
+	h1
+		margin: 0
+//configuración inicio
+header
+	z-index: 1000
+	position: fixed
+	+elementSize(100%, false)
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5))
+	h1
+		color: $botonColor
+		font-family: $titleFontName
+		margin: 1rem 0.7rem
+		+elementSize(80%, 0)
+		display: inline-block
+		text-align: left
+		vertical-align: sub
+		cursor: pointer
+		@media screen and(min-width:$mediaPC)
+			margin: 0 0 0 0.7rem
+			+elementSize(22%, false)
+	.fa
+		font-size: 1.7rem
+	#abrirMovil
+		display: inline-block
+		outline: none
+		vertical-align: middle
+		background: none
+		border: 0px
+		color: white
+		@media screen and(min-width:$mediaPC)
+			display: none
+	nav
+		vertical-align: middle
+		display: inline-block
+		text-align: center
+		+elementSize(100%, false) 
+		@media screen and(min-width:$mediaPC)
+			+elementSize(76%, false)
+			text-align: right
+		ul
+			display: none
+			@media screen and(min-width:$mediaPC)
+				text-align: right
+				display: block
+			li
+				margin: 1.3rem 0.7rem
+				display: block
+				@media screen and(min-width:$mediaPC)
+					display: inline-block
+				list-style: none
+				cursor: pointer
+				transition: color ease-in 0.2s
+				text-shadow: 3px 3px 2px #0f0f0f
+				font-weight: bold
+				&:hover
+					color: $titleColor
+main
+	section
+		min-height: 90vh
+		padding-top: 10vh
+		text-align: center
+		background-attachment: fixed
+		background-size: cover
+		background-position: center
+		article		
+			padding: 5%
+			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5))
+			+elementSize(80%, false)
+			margin: 0 auto 
+			box-shadow: 1px 1px 10px 0 #000
+			*
+				margin: 0.5rem
+			.text
+				text-align: justify
+				text-shadow: 1px 1px 2px #000
+	h2
+		font-family: $titleFontName
+		color: $titleColor
+		padding: 1rem 0
+		margin: 0
+		text-shadow: 1px 1px 2px #000
+	#home
+		min-height: 100vh
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background1.gif")
+		#titulo
+			margin: 0
+			padding: 0
+			position: absolute
+			text-align: center
+			top: 40%
+			left: 0
+			right: 0
+			font-family: $titleFontName
+			font-weight: 700
+			color: $titleColor
+			font-size: 1.6rem
+			@media screen and(min-width:$mediaPC)
+				font-size: 2.6rem
+			img
+				cursor: pointer
+				width: 2rem
+				margin-top: 3%
+	#whoiam
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background2.png")
+		article		
+			.imgPerfil
+				width: 8rem
+				border-radius: 50%
+				border: thick double white
+			#followMe
+				img
+					width: 2rem
+					color: white
+	#jobs
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background3.png")
+	#skills
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.5)), url("../imgs/background3.jpg")
+		#skillsDesc
+			background: linear-gradient(rgba(200, 200, 200, 0.5), rgba(150, 150, 150, 0.5))!important
+		#barras
+			display: flex
+			flex-flow: wrap
+			.contenedorBarras
+				+elementSize(100%, false)
+				@media screen and(min-width:$mediaPC)
+					+elementSize(45%, false)
+				img
+					width: 2rem
+					vertical-align: middle
+				>div
+					display: inline-block
+					padding: 0
+					width: 70%
+					height: 20px
+					border: 10px solid transparent
+					-webkit-border-image: url("../imgs/barravacia.png") 1
+					-o-border-image: url("../imgs/barravacia.png") 1
+					border-image: url("../imgs/barravacia.png") 1
+					>div
+						margin: 0
+						+elementSize(false, 100%)
+						text-shadow: 2px 2px 5px #000
+					#barraLlenaJS
+						+barraInterior($jsColor1, $jsColor2, 80%)
+					#barraLlenaHTML
+						+barraInterior($htmlColor1, $htmlColor2, 70%)
+					#barraLlenaCSS
+						+barraInterior($cssColor1, $cssColor2, 75%)
+					#barraLlenaPHP
+						+barraInterior($phpColor1, $phpColor2, 65%)
+					#barraLlenaJava
+						+barraInterior($javaColor2, $javaColor1, 55%)
+					#barraLlenaCsharp
+						+barraInterior($csharpColor1, $csharpColor2, 35%)
+					#barraLlenaAndroid
+						+barraInterior($androidColor1, $androidColor2, 40%)
+					#barraLlenaIonic
+						+barraInterior($ionicColor1, $ionicColor2, 20%)
+					#barraLlenaJq
+						+barraInterior($jqueryColor2, $jqueryColor1, 37%)
+					#barraLlenaMysql
+						+barraInterior($mysqlColor1, $mysqlColor2, 63%)
+	#contact		
+		background-image: linear-gradient(rgba(200, 200, 200, 0.5), rgba(150, 150, 150, 0.5)), url("../imgs/background4.jpg")
+textarea, input
+	display: inline-block
+	padding: 0
+	border: 10px solid transparent
+	-webkit-border-image: url("../imgs/barravacia.png") 1
+	-o-border-image: url("../imgs/barravacia.png") 1
+	border-image: url("../imgs/barravacia.png") 1
+#formulario
+	background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(100, 100, 100, 0.5))!important
+	padding-top: 1rem
+	label
+		display: block
+	button
+		font-family: "PokemonGB", Arial, sans-serif
+		border-radius: 2px
+		padding: 0.7rem
+		line-height: 16px
+		margin: auto
+		background: white
+		border: 1px solid white
+		box-shadow: 0 1px 0 1px black, inset 0 1px 0 1px black, 0 0 0 1px black, inset 0 0 0 1px black
+		transition: background ease-in 0.3s
+		&:hover
+			background: #e3e3e3
+	input:required, textarea
+		resize: none
+		min-width: 90%
+		@media screen and(min-width:$mediaPC)
+			+elementSize(30%, false)
+		font-size: 0.5rem
+		font-family: "PokemonGB", Arial, sans-serif
+		border-radius: 2px
+		padding: 0.7rem
+		line-height: 16px
+		margin: auto
+		background: white
+		border: 1px solid white
+		box-shadow: 0 1px 0 1px black, inset 0 1px 0 1px black, 0 0 0 1px black, inset 0 0 0 1px black
+	input:invalid
+		background: #de8484
+	input:valid
+		background: #c3c3c3
+#jobsDesc
+	#imagenes
+		display: flex
+		flex-flow: wrap
+		margin: 0 auto
+		justify-content: center
+		div
+			transition: all ease-in 0.3s
+			&:hover
+				transform: translate(0, 0.3rem)
+			a
+				color: #e3e3e3
+				display: block
+				transition: all ease-in-out 0.3s
+				&:hover
+					color: #00fff0
+					font-size: 1.1rem
+				img
+					border: 10px solid transparent
+					-webkit-border-image: url("../imgs/barravacia.png") 1
+					-o-border-image: url("../imgs/barravacia.png") 1
+					border-image: url("../imgs/barravacia.png") 1
+					width: 15rem
+					height: 7.5rem
+					display: block
